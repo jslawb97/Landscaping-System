@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{121A0686-1D34-4434-92A2-40C4201BC91D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WPFPresentation</RootNamespace>
+    <AssemblyName>WPFPresentation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.DataGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.3.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="frmAddEditCertification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditChecklist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditCustomerType.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddEditEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditEmployeeAllocation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditEmployeeAvailability.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditEmployeeCertification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditEmployeeRole.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditEquipment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditEquipmentAllocation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditEquipmentStatus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditEquipmentType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditInspectionRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditJob.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditJobLocation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditJobLocationAttributeType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditMaintenanceRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditMakeModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditPaymentType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditPrepChecklist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditPrepRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditResupplyOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditRole.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddEditServiceOffering.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddEditServicePackage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditServiceItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditSource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditSpecialOrderForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditSpecialOrderItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditSpecialOrderLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditSupply.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditSupplyOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditTaskType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditTaskTypeEmployeeNeed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditTaskTypeEquipmentNeed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditTaskTypeSupplyNeed.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmAddEditTimeOffRequest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmAddEditVendor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmEditJobResourceAllocation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmReceivingSupplyOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmResupplyOrderReceiving.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmSpecialOrderReceiving.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmUpdateOrderItemQuantity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmAddEditCertification.xaml.cs">
+      <DependentUpon>frmAddEditCertification.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditChecklist.xaml.cs">
+      <DependentUpon>frmAddEditChecklist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditCustomer.xaml.cs">
+      <DependentUpon>frmAddEditCustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditCustomerType.xaml.cs">
+      <DependentUpon>frmAddEditCustomerType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditEmployee.xaml.cs">
+      <DependentUpon>frmAddEditEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditEmployeeAllocation.xaml.cs">
+      <DependentUpon>frmAddEditEmployeeAllocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditEmployeeAvailability.xaml.cs">
+      <DependentUpon>frmAddEditEmployeeAvailability.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditEmployeeCertification.xaml.cs">
+      <DependentUpon>frmAddEditEmployeeCertification.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditEmployeeRole.xaml.cs">
+      <DependentUpon>frmAddEditEmployeeRole.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditEquipment.xaml.cs">
+      <DependentUpon>frmAddEditEquipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditEquipmentAllocation.xaml.cs">
+      <DependentUpon>frmAddEditEquipmentAllocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditEquipmentStatus.xaml.cs">
+      <DependentUpon>frmAddEditEquipmentStatus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditEquipmentType.xaml.cs">
+      <DependentUpon>frmAddEditEquipmentType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditInspectionRecord.xaml.cs">
+      <DependentUpon>frmAddEditInspectionRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditJob.xaml.cs">
+      <DependentUpon>frmAddEditJob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditJobLocation.xaml.cs">
+      <DependentUpon>frmAddEditJobLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditJobLocationAttributeType.xaml.cs">
+      <DependentUpon>frmAddEditJobLocationAttributeType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditMaintenanceRecord.xaml.cs">
+      <DependentUpon>frmAddEditMaintenanceRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditMakeModel.xaml.cs">
+      <DependentUpon>frmAddEditMakeModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditPaymentType.xaml.cs">
+      <DependentUpon>frmAddEditPaymentType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditPrepChecklist.xaml.cs">
+      <DependentUpon>frmAddEditPrepChecklist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditPrepRecord.xaml.cs">
+      <DependentUpon>frmAddEditPrepRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditResupplyOrder.xaml.cs">
+      <DependentUpon>frmAddEditResupplyOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditRole.xaml.cs">
+      <DependentUpon>frmAddEditRole.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditServiceOffering.xaml.cs">
+      <DependentUpon>frmAddEditServiceOffering.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditServicePackage.xaml.cs">
+      <DependentUpon>frmAddEditServicePackage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditServiceItem.xaml.cs">
+      <DependentUpon>frmAddEditServiceItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditSource.xaml.cs">
+      <DependentUpon>frmAddEditSource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditSpecialOrderForm.xaml.cs">
+      <DependentUpon>frmAddEditSpecialOrderForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditSpecialOrderItem.xaml.cs">
+      <DependentUpon>frmAddEditSpecialOrderItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditSpecialOrderLine.xaml.cs">
+      <DependentUpon>frmAddEditSpecialOrderLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditSupply.xaml.cs">
+      <DependentUpon>frmAddEditSupply.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditSupplyOrder.xaml.cs">
+      <DependentUpon>frmAddEditSupplyOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditTask.xaml.cs">
+      <DependentUpon>frmAddEditTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditTaskType.xaml.cs">
+      <DependentUpon>frmAddEditTaskType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditTaskTypeEmployeeNeed.xaml.cs">
+      <DependentUpon>frmAddEditTaskTypeEmployeeNeed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditTaskTypeEquipmentNeed.xaml.cs">
+      <DependentUpon>frmAddEditTaskTypeEquipmentNeed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditTaskTypeSupplyNeed.xaml.cs">
+      <DependentUpon>frmAddEditTaskTypeSupplyNeed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditTimeOffRequest.xaml.cs">
+      <DependentUpon>frmAddEditTimeOffRequest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddEditVendor.xaml.cs">
+      <DependentUpon>frmAddEditVendor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditJobResourceAllocation.xaml.cs">
+      <DependentUpon>frmEditJobResourceAllocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceivingSupplyOrder.xaml.cs">
+      <DependentUpon>frmReceivingSupplyOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmResupplyOrderReceiving.xaml.cs">
+      <DependentUpon>frmResupplyOrderReceiving.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmSpecialOrderReceiving.xaml.cs">
+      <DependentUpon>frmSpecialOrderReceiving.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateOrderItemQuantity.xaml.cs">
+      <DependentUpon>frmUpdateOrderItemQuantity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataObjects\DataObjects.csproj">
+      <Project>{dcd1fada-408c-4f62-a022-bfa760359f16}</Project>
+      <Name>DataObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logic\Logic.csproj">
+      <Project>{ae484c69-91d2-4be3-9539-1badd54ec0f5}</Project>
+      <Name>Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="images\logo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

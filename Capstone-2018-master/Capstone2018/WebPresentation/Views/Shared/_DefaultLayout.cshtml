@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Content/JavaScript.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="main-home">
+    <div class="navbar navbar-fixed-top nav-color">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("CR Landscaping", "Index", "Home", null, new { @class = "logo-top" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="custom-nav nav navbar-nav">
+                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @{
+                        if (Request.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Foreman"))
+                            {
+                                <li>@Html.ActionLink("Job Tasks", "Index", "JobTasks")</li>
+                            }
+                        }
+                        if (Request.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Admin"))
+                            {
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Admin
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>@Html.ActionLink("User Management", "Index", "Admin")</li>                                            
+                                        <li>@Html.ActionLink("View Employees", "EmployeeList", "PersonalEquipment")</li> 
+                                        <li>@Html.ActionLink("Manage Customers","Index","Customer")</li>
+                                    </ul>
+                                </li>
+                            }
+                            if (User.IsInRole("Foreman"))
+                            {
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Foreman
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>@Html.ActionLink("View Employees", "EmployeeList", "PersonalEquipment")</li>
+                                    </ul>
+                                </li>
+                            }
+                        }
+                    }
+                    
+                    
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="footer">
+            @Html.ActionLink("Services", "Services", "Home")&nbsp;&nbsp;
+            @Html.ActionLink("About Us", "About", "Home")&nbsp;&nbsp;
+            @Html.ActionLink("Contact", "Contact", "Home")&nbsp;&nbsp;
+            <br />
+            &copy; 2018 Web Development Capstone: Cedar Rapids Landscaping
+        </footer>
+    </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/personalEquipmentScripts")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<DataObjects.PersonalEquipment>
+
+@{ 
+
+    DataObjects.Employee employee = (DataObjects.Employee)System.Web.HttpContext.Current.Session["CurrentEmployee"];
+}
+
+<div class="panel-body">
+    <table class="table table-condensed">
+        <tr>
+            <th>ID</th>
+            <th>Item Name</th>
+            <th>Type</th>
+            <th>Status</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PersonalEquipmentID</td>
+                <td>@item.Name</td>
+                <td>@item.PersonalEquipmentType</td>
+                <td>@item.PersonalEquipmentStatus</td>
+
+                <td>
+                    @using (Html.BeginForm("AssignPersonalEquipment", "PersonalEquipment", new { equipmentID = item.PersonalEquipmentID, employeeID = employee.EmployeeID }))
+                    {
+                        @Html.Hidden("PersonalEquipmentID", item.PersonalEquipmentID)
+
+                        <input type="submit"
+                               class="btn btn-default btn-xs"
+                               value="Assign" />
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+
+

@@ -1,0 +1,3 @@
+REST API Demo site: http://crls-api-demo.us-east-1.elasticbeanstalk.com/
+
+RDS Endpoint: "Data Source=crlandscaping.cvyxh3elzzol.us-east-1.rds.amazonaws.com,1723;Initial Catalog=crlandscaping;User ID=fearlesspixel;Password=Passw0rd"

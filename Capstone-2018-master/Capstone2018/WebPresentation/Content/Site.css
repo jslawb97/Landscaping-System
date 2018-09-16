@@ -1,0 +1,163 @@
+﻿* {
+    font-family: Georgia;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url("/../images/background.jpg");
+    background-repeat: repeat-y;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*CUSTOM CSS*/
+
+table.services {
+    margin: auto;
+    border: 2px solid #aec1af;
+    background-image: url("/../images/grass-edit.jpg");
+    background-position: center; 
+    font-family: Georgia;
+    table-layout: fixed;   
+    text-align: center;
+    padding: 25px;   
+}
+
+table.services td {
+    vertical-align: top;
+    width: 300px;
+}
+
+.footer {
+    margin: auto;
+    font-family: Georgia; 
+    text-align: center;
+}
+
+.custom-nav {
+    font-family: Georgia;
+    font-size: 20px;
+    color: #000000;
+}
+
+#logoutForm {
+    margin-right: -10px;
+}
+
+.custom-nav a:hover {
+    color: black !important;
+}
+
+.navbar, .navbar-inverse {
+   background: #e8ffe9 !important;
+   border-color: #aec1af !important;
+}
+
+.logo-top {
+    font-size: 36px;
+    font-family: Georgia;
+    font-weight: bold;
+    color: #29a329;
+}
+
+.home-font {
+    margin: auto;
+    font-family: Georgia;
+    font-size: 14px;
+    max-width: 850px;
+}
+
+.sliderImage {
+    height: 500px;
+    width: 1000px;
+    display: block;
+    margin: 0 auto;
+}
+
+.CRLogo {
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+
+.services {
+    margin: auto;
+    max-width: 850px;
+    font-family: Georgia;
+}
+
+.my-carousel {
+    max-width: 750px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.base-style {
+    font-family: Georgia;
+    margin: auto;
+    max-width: 850px;
+}
+
+.tableRow {
+    display: table-row;
+}
+
+.tableCell {
+    display: table-cell;
+    padding: 5px;
+    border-bottom: solid black 1px;
+}
+
+#employeePersonalInformation {
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    margin-bottom: auto;
+    /*margin-left: 200px;*/
+    width: 330px;
+}
+
+.navbar-fixed-top {
+    margin-left: -100px;
+}
+
+.nav > li > a {
+    color: #5e5e5e;
+}
+
+.logo-top {
+    padding-right: 10px;
+    margin-left: -10px;
+}
+
+.logo-top:hover {
+    text-decoration: none;
+    color: #29a329;
+}
+
+::selection {
+    background: rgb(159, 255, 150);
+}
+
+::-moz-selection {
+    background: rgb(159, 255, 150);
+}

@@ -1,0 +1,74 @@
+﻿<Window x:Class="WPFPresentation.frmAddEditEmployeeAllocation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFPresentation"
+        mc:Ignorable="d"
+        Title="Add/Edit Employee Allocation" Height="400" Width="500" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="80"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Available Employees" HorizontalAlignment="Center"
+               VerticalAlignment="Bottom"></Label>
+        <Label Content="Assigned Employees" HorizontalAlignment="Center"
+               VerticalAlignment="Bottom" Grid.Column="2"></Label>
+
+        <DataGrid Grid.Row="1"
+                  Grid.Column="2"
+                              Margin="15 0 15 0"
+                              Name="dgAssignedEmployees" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Employee" Binding="{Binding FullName}" Width="*" IsReadOnly="True"></DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <DataGrid Grid.Row="1"
+                              Margin="15 0 15 0"
+                              Name="dgAvailableEmployees" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Employee" Binding="{Binding FullName}" Width="*" IsReadOnly="True"></DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1" Height="60">
+            <Button Width="75" Height="25"
+                                Content=">"
+                                Name="btnAddToAssigned" Margin="0 0 0 10" Click="btnAddToAssigned_Click">
+
+            </Button>
+            <Button Width="75"
+                    Height="25"
+                    Content="&lt;"
+                    Name="btnRemoveFromAssigned" Click="btnRemoveFromAssigned_Click">
+
+            </Button>
+        </StackPanel>
+
+        <Button Grid.Row="2"
+                Grid.Column="2"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Margin="0 0 15 0"
+            Width="75"
+                    Height="25"
+                    Content="Cancel"
+                    Name="btnCancel" Click="btnCancel_Click">
+
+        </Button>
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DataObjects.Employee>
+
+<!DOCTYPE html>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>Current Employees:</h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed">
+            <tr class="table-header">
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <td>@employee.FullName</td>
+                    <td>@employee.Email</td>
+                    <td>@employee.PhoneNumber</td>
+                    <td>
+                        @using (Html.BeginForm("EquipmentAssignment", "PersonalEquipment", new { employeeID = employee.EmployeeID }))
+                        {
+                            @Html.Hidden("SoldierID", employee.EmployeeID)
+                            <input type="submit"
+                                   class="btn btn-default btn-xs"
+                                   value="View" />
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="panel-footer">
+    </div>
+</div>

@@ -1,0 +1,99 @@
+﻿<Window x:Class="WPFPresentation.frmReceivingSupplyOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFPresentation"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="Receive Supply Order" Height="500" Width="500" Loaded="Window_Loaded">
+    <Grid Margin="15 15 15 15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition />
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0"
+               Content="Supply Items Ordered"></Label>
+        <DataGrid Name="dgSupplyOrderItems"
+                    Grid.Row="1"
+                    IsReadOnly="True"
+                    SelectionMode="Single"
+                    AutoGenerateColumns="False" SelectionChanged="dgSupplyOrderItems_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Supply Item" Width="*" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Quantity Ordered" Width="*" Binding="{Binding OrderItem.Quantity}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Quantity Received" Width="*" Binding="{Binding OrderItem.QuantityReceived}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    Width="Auto"
+                    Height="30"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom">
+            <Label Content="Order Received"
+                   VerticalAlignment="Center"
+                   Margin="0 2 0 0"></Label>
+            <CheckBox Name="chkReceived"
+                      VerticalAlignment="Center"></CheckBox>
+        </StackPanel>
+        <Button Name="btnReceiveAll"
+                Content="Received All"
+                Height="25"
+                Width="75"
+                Grid.Row="2"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom" Click="btnReceiveAll_Click">            
+        </Button>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal"
+                    Width="Auto"
+                    Height="30"
+                    Margin="0 0 0 2.5"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom">
+                <Label Content="Qty Received"
+                        Margin="0 5 0 0"></Label>
+                <xctk:IntegerUpDown
+                        Height="25"
+                        Name="numQtyReceived"
+                        Margin="0 5 0 0"></xctk:IntegerUpDown>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Grid.Column="2"
+                        Width="Auto"
+                        Height="30"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Right">
+                <Button Name="btnSetQty"
+                        Content="Set"
+                        Height="25"
+                        Width="75"
+                        Margin="0 0 80 0" Click="btnSetQty_Click"></Button>
+                <Button Grid.Column="1"
+                    Name="btnSave"
+                    Content="Save"
+                    Height="25"
+                    Width="75"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="0 2.5 20 2.5" Click="btnSave_Click"></Button>
+                <Button Grid.Column="1"
+                    Name="btnCancel"
+                    Content="Cancel"
+                    Height="25"
+                    Width="75"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Margin="0 2.5 0 2.5" Click="btnCancel_Click"></Button>
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+</Window>

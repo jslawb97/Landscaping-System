@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D58F377A-531A-4E62-816E-CE8D826A5228}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccessMocks</RootNamespace>
+    <AssemblyName>DataAccessMocks</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AvailabilityAccessorMock.cs" />
+    <Compile Include="CertificationAccessorMock.cs" />
+    <Compile Include="CustomerAccessorMock.cs" />
+    <Compile Include="EmployeeAccessorMock.cs" />
+    <Compile Include="EmployeeCertificationAccessorMock.cs" />
+    <Compile Include="EmployeeRoleAccessorMock.cs" />
+    <Compile Include="EquipmentAccessorMock.cs" />
+    <Compile Include="EquipmentStatusAccessorMock.cs" />
+    <Compile Include="EquipmentTypeAccessorMock.cs" />
+    <Compile Include="InspectionRecordAccessorMock.cs" />
+    <Compile Include="JobAccessorMock.cs" />
+    <Compile Include="JobLocationAccessorMock.cs" />
+    <Compile Include="JobLocationAttributeTypeAccessorMock.cs" />
+    <Compile Include="MaintenanceChecklistAccessorMock.cs" />
+    <Compile Include="MaintenanceRecordAccessorMock.cs" />
+    <Compile Include="MakeModelAccessorMock.cs" />
+    <Compile Include="PaymentTypeAccessorMock.cs" />
+    <Compile Include="InspectionChecklistAccessorMock.cs" />
+    <Compile Include="PersonalEquipmentAccessorMock.cs" />
+    <Compile Include="PrepRecordAccessorMock.cs" />
+    <Compile Include="ResupplyOrderAccessorMock.cs" />
+    <Compile Include="ResupplyOrderLineAccessorMock.cs" />
+    <Compile Include="RoleAccessorMock.cs" />
+    <Compile Include="ServiceItemAccessorMock.cs" />
+    <Compile Include="CustomerTypeAccessorMock.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceOfferingAccessorMock.cs" />
+    <Compile Include="ServiceOfferingAccessorMockFail.cs" />
+    <Compile Include="ServiceOfferingItemAccessorMock.cs" />
+    <Compile Include="ServicePackageAccessorMock.cs" />
+    <Compile Include="SourceAccessorMock.cs" />
+    <Compile Include="SpecialOrderItemAccessorMocks.cs" />
+    <Compile Include="SpecialOrderLineAccessorMocks.cs" />
+    <Compile Include="SupplyAccessorMocks.cs" />
+    <Compile Include="SpecialOrderAccessorMock.cs" />
+    <Compile Include="SupplyOrderAccessorMock.cs" />
+    <Compile Include="SupplyOrderItemAccessorMock.cs" />
+    <Compile Include="SupplyStatusAccessorMock.cs" />
+    <Compile Include="TaskAccessorMock.cs" />
+    <Compile Include="TaskEmployeeAccessorMock.cs" />
+    <Compile Include="TaskEquipmentAccessorMock.cs" />
+    <Compile Include="TaskSupplyAccessorMock.cs" />
+    <Compile Include="TaskTypeAccessorMocks.cs" />
+    <Compile Include="TaskTypeEmployeeNeedAccessorMock.cs" />
+    <Compile Include="TaskTypeEquipmentNeedAccessorMock.cs" />
+    <Compile Include="TaskTypeSupplyNeedAccessorMock.cs" />
+    <Compile Include="TimeOffRequestAccessorMock.cs" />
+    <Compile Include="UserAccessorMocks.cs" />
+    <Compile Include="VendorAccessorMock.cs" />
+    <Compile Include="PrepChecklistAccessorMock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{369354cd-ddc1-4fee-aa99-48826521749b}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataObjects\DataObjects.csproj">
+      <Project>{dcd1fada-408c-4f62-a022-bfa760359f16}</Project>
+      <Name>DataObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<DataObjects.ServicePackage>
+@{
+    ViewBag.Title = "Services";
+}
+<h2 style="font-family: Georgia;">@ViewBag.Title</h2>
+
+@if (User.IsInRole("Admin") && false)
+{
+    <p style="font-family: Georgia;">
+        @Html.ActionLink("Create New", "Create")
+    </p>
+}
+
+@if (Model != null) {
+    foreach (var item in Model) {
+        if (item.Active) {
+            <div style="font-family: Georgia; display: inline-block;">
+                <h3 style="font-family: Georgia;">@Html.DisplayFor(modelItem => item.Name)</h3>
+
+                <button class="btn btn-primary" onclick="location.href = '@Url.Action("Details", "ServicePackage", new { id = item.ServicePackageID })'">Order</button>
+
+                @if (User.IsInRole("Admin")) {
+                    <span>
+                        <button class="btn btn-primary" onclick="location.href = '@Url.Action("Edit", "ServicePackage", new {id = item.ServicePackageID})'">Edit</button>
+                        <button class="btn btn-primary" onclick="location.href = '@Url.Action("Deactivate", "ServicePackage", new {id = item.ServicePackageID})'">Deactivate</button>
+                    </span>
+                }
+                <h4 style="font-family: Georgia;">@Html.DisplayFor(modelItem => item.Description)</h4>
+            </div>
+        }
+    }
+}

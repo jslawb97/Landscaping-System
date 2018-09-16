@@ -1,0 +1,247 @@
+﻿<Window xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"  x:Class="WPFPresentation.frmAddEditEquipment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFPresentation"
+        mc:Ignorable="d"
+        Title="frmAddEditEquipment" Height="650" Width="700" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27.405"></ColumnDefinition>
+            <ColumnDefinition Width="82.595"/>
+            <ColumnDefinition Width="168.645"></ColumnDefinition>
+            <ColumnDefinition Width="22.355"/>
+            <ColumnDefinition Width="54*"></ColumnDefinition>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="270*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.ColumnSpan="4"
+               Name="lblHeader"
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               Content="Adding a new Equipment"
+               FontSize="16"
+               FontWeight="Bold">
+        </Label>
+
+        <Label Content="Name"
+               Grid.Row="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center" Margin="0,9" Grid.Column="1">
+        </Label>
+        <TextBox Name="txtName"
+                 Height="25"
+                 Margin="0,10,10,9"
+                 HorizontalContentAlignment="Left"
+                 VerticalContentAlignment="Center"
+                 Grid.Column="2"
+                 Grid.Row="1" Grid.ColumnSpan="2"
+                 MaxLength="100">
+
+        </TextBox>
+        <Label Content="Type"
+               Grid.Row="2"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center" Margin="0,9" Grid.Column="1">
+        </Label>
+        <ComboBox Name="cboType"
+                  Grid.Row="2"
+                  Grid.Column="2"
+                  Height="25"
+                  Margin="0,10,10,9" Grid.ColumnSpan="2"
+                  ItemsSource="{Binding Path=EquipmentType}" 
+                  DisplayMemberPath="EquipmentTypeID">
+
+        </ComboBox>
+        <Label Content="Make"
+               Grid.Row="3"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center" Margin="0,9" Grid.Column="1">
+        </Label>
+        <ComboBox Name="cboMake"
+                  Grid.Row="3"
+                  Grid.Column="2"
+                  Height="25"
+                  Margin="0,10,10,9" Grid.ColumnSpan="2"             
+                  ItemsSource="{Binding Path=MakeModel}" 
+                  DisplayMemberPath="Make" SelectionChanged="cboMake_SelectionChanged"
+                  >
+
+
+        </ComboBox>
+        <Label Content="Model"
+               Grid.Row="4"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center" Margin="0,9" Grid.Column="1">
+        </Label>
+        <ComboBox Name="cboModel"
+                  Grid.Row="4"
+                  Grid.Column="2"
+                  Height="25"
+                  Margin="0,10,10,9" Grid.ColumnSpan="2"
+                  ItemsSource="{Binding Path=MakeModel}" 
+                  DisplayMemberPath="Model">
+
+        </ComboBox>
+        <Label Content="Status"
+               Grid.Row="5"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center" Margin="0,9" Grid.Column="1">
+        </Label>
+
+        <ComboBox Name="cboStatus"
+                  Grid.Row="5"
+                  Grid.Column="2"
+                  Height="25"
+                  Margin="0,10,10,9" Grid.ColumnSpan="2"
+                  ItemsSource="{Binding Path=EquipmentStatus}" 
+                  DisplayMemberPath="EquipmentStatusID">
+
+
+        </ComboBox>
+        <Label Content="Date Purchased"
+               Grid.Row="6"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center" Margin="0,9" Grid.ColumnSpan="2">
+        </Label>
+        <xctk:DateTimePicker Name="datePurchased"
+                             TimePickerVisibility="Hidden" 
+                             Format="Custom" 
+                             FormatString="yyyy/MM/dd"
+                             Grid.Column="2"
+                             Grid.Row="6"
+                             HorizontalContentAlignment="Right"
+                             Height="25"
+                             VerticalContentAlignment="Center"
+                             Margin="0,10,10,9" Grid.ColumnSpan="2"
+                             />
+        <Label Content="Last Repaired"
+               Grid.Row="7"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center" Margin="0,9" Grid.Column="1">
+        </Label>
+        <xctk:DateTimePicker Name="dateRepaired"
+                             TimePickerVisibility="Hidden" 
+                             Format="Custom" 
+                             FormatString="yyyy/MM/dd"
+                             Grid.Column="2"
+                             Grid.Row="7"
+                             HorizontalContentAlignment="Right"
+                             Height="25"
+                             VerticalContentAlignment="Center"
+                             Margin="0,10,10,9" Grid.ColumnSpan="2"/>
+        <Label Content="Purchase Price"
+               Grid.Row="8"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center" Margin="0,9" Grid.ColumnSpan="2">
+        </Label>
+        <xctk:DecimalUpDown Name="numPurchasePrice"
+                            Grid.Row="8"
+                            Grid.Column="2"
+                            HorizontalContentAlignment="Right"
+                            Height="25"
+                            VerticalContentAlignment="Center"
+                            Margin="0,10,10,9"
+                            Increment="0.01"
+                            Minimum="0.00"
+                            FormatString="C2" Grid.ColumnSpan="2"
+                            Maximum="99999999"/>
+        <Label Content="Current Value"
+               Grid.Row="9"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center" Margin="0,8,0,9" Grid.Column="1">
+        </Label>
+        <xctk:DecimalUpDown Name="numCurrentValue"
+                            Grid.Row="9"
+                            Grid.Column="2"
+                            HorizontalContentAlignment="Right"
+                            Height="25"
+                            VerticalContentAlignment="Center"
+                            Margin="0,9,10,9"
+                            Increment="0.01"
+                            Minimum="0.01"
+                            FormatString="C2" Grid.ColumnSpan="2"
+                            Maximum="99999999"/>
+        <Label Content="Warranty Expires"
+               Grid.Row="10"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center" Margin="0,9" Grid.ColumnSpan="2">
+        </Label>
+        <xctk:DateTimePicker Name="dateWarrantyExpires"
+                             TimePickerVisibility="Hidden" 
+                             Format="Custom" 
+                             FormatString="yyyy/MM/dd"
+                             Grid.Column="2"
+                             Grid.Row="10"
+                             HorizontalContentAlignment="Right"
+                             Height="25"
+                             VerticalContentAlignment="Center"
+                             Margin="0,9,10,9" Grid.ColumnSpan="2"/>
+        <Label Content="Details"
+               Grid.Row="1"
+               Grid.Column="4"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               Margin="20,9,0,9" Grid.ColumnSpan="2">
+        </Label>
+        <TextBox Name="txtDetails"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 Grid.Row="2"
+                 Grid.RowSpan="9"
+                 Grid.Column="4"
+                 AcceptsReturn="True"
+                 Margin="20 0 20 0" Grid.ColumnSpan="4"
+                 MaxLength="1000">
+
+        </TextBox>
+        <Label Content="Active"
+               Grid.Row="11"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center" Margin="0,9" Grid.ColumnSpan="2">
+        </Label>
+        <CheckBox Grid.Row="11"
+                  Grid.Column="2"
+                  VerticalAlignment="Center"
+                  Name="chkActive">
+
+        </CheckBox>
+        <StackPanel Orientation="Horizontal"
+                    Height="24"
+                    Width="Auto"
+                    Grid.Row="12"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Center"
+                    Margin="0,10,10,10" Grid.Column="2" Grid.ColumnSpan="2">
+            <Button Width="75"
+                    Content="Add"
+                    Margin="0 0 10 0"
+                    Name="btnAddEdit" Click="btnAddEdit_Click">
+
+            </Button>
+            <Button Width="75"
+                    Content="Cancel"
+                    Name="btnCancel">
+
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

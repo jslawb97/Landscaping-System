@@ -1,0 +1,293 @@
+﻿@{
+    ViewBag.Title = "Services";
+    int servicePackageOneID = ViewBag.ServicePackageOne;
+    int servicePackageTwoID = ViewBag.ServicePackageTwo;
+    int servicePackageThreeID = ViewBag.ServicePackageThree;
+}
+
+<!DOCTYPE html>
+
+<head>
+    <title>Services</title>
+    <script src="~/Content/JavaScript.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+
+<body class="services">
+    <h2 style="font-family: Georgia;">Services</h2>
+
+    <p>Below is a list of landscaping packages available for purchase.</p><br />
+
+<table class="services">
+    <tr>
+        <td>
+            <h2 style="font-family: Georgia;">Gold Package</h2>
+
+            Lawn Fertilization<br />
+            Sod Installation<br />
+            Deep Core Aeration<br />
+            Irrigation/Sprinkler Diagnostics & Repair<br />
+            Over-Seeding<br />
+            Lawn Mowing<br />
+            Edging & Blowing<br />
+            Dethatching & Power Raking<br />
+            Bagging of Clippings<br />
+            Weed Control<br />
+            Disease & Fungus Control<br />
+            Insect Control<br /><br />
+            @Html.ActionLink("Add to order", "Add", new { id = servicePackageOneID }, new { @class = "btn btn-default" })
+            <br />
+        </td>
+        <td>
+            <h2 style="font-family: Georgia;">Silver Package</h2>
+
+            Lawn Mowing<br />
+            Edging & Blowing<br />
+            Dethatching & Power Raking<br />
+            Bagging of Clippings<br />
+            Weed Control<br />
+            Disease & Fungus Control<br />
+            Insect Control<br /><br />
+            @Html.ActionLink("Add to order", "Add", new { id = servicePackageTwoID }, new { @class = "btn btn-default" })
+            <br />
+        </td>
+        <td>
+            <h2 style="font-family: Georgia;">Bronze Package</h2>
+
+            Lawn Mowing<br />
+            Edging & Blowing<br />
+            Bagging of Clippings<br /><br />
+            @Html.ActionLink("Add to order", "Add", new { id = servicePackageThreeID }, new { @class = "btn btn-default" })
+            <br />
+        </td>
+    </tr>
+</table>
+<br />
+<br />
+<h3>Our Services - Click for details</h3>
+    <div class="accordion" id="accordion" style="max-width: 1000px; margin: auto; font-family: Georgia;">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne" style="font-family: Georgia;">
+                        LAWN FERTILIZATION
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body well">
+                    We always pride ourselves on using the best possible fertilization methods, and that’s why we choose to
+                    use granular fertilizers. This type of fertilizer has a timing element which adds an effectiveness that
+                    liquid fertilizers simply cannot. This product lasts anywhere from one to six weeks depending on your
+                    lawn care needs. We use slow- and fast-release formulas in-tandem which include a perfectly balanced
+                    mixture of nitrogen, phosphorus and potassium.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo" style="font-family: Georgia;">
+                        SOD INSTALLATION
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body well">
+                    Could your lawn use a complete overhaul at the very most fundamental level? The professionals at CR
+                    Landscaping are your sod experts and are ready to re-make your lawn today! Your time is valuable so don’t
+                    waste it trying to figure out which sod is right and how to properly install it in your yard. Call CR
+                    Landscaping and let our professionals make your life that much simpler.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="false" aria-controls="collapseThree" style="font-family: Georgia;">
+                        DEEP CORE AERATION
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body well">
+                    Our lawn aeration services consists of driving holes into your lawn’s soil (and any thatch above it) to
+                    facilitate the entrance of water, air, and fertilizer in order to gain better access to the roots of your
+                    lawns grass. Lawn aeration allows the grass roots to grow deeper, establishing a more robust and overall
+                    healthier lawn. The depth of the aeration plug is dependent on moisture level of the soil, but typically
+                    should be about 3 inches. The professionals at CR Landscaping recommend performing deep core lawn aeration
+                    twice a year; once in the spring and once in the fall.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="false" aria-controls="collapseFour" style="font-family: Georgia;">
+                        IRRIGATION/SPRINKLER DIAGNOSTICS & REPAIR
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body well">
+                    In order to keep your Iowa lawn beautiful during the Colorado summers, it is critical that your sprinkler and
+                    irrigation systems are functioning properly. Our expert sprinkler repair specialists are not only able to
+                    diagnose what might be causing any problems that you are experiencing, but also have the experience and
+                    expertise to remedy the problem and get your Iowa lawn looking great once again. The beauty of your lawn and
+                    landscape depends on your sprinklers functioning properly. Call the sprinkler diagnostics and repair experts
+                    at CR Landscaping today.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+                            aria-expanded="false" aria-controls="collapseFive" style="font-family: Georgia;">
+                        OVER-SEEDING
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body well">
+                    Overseeding is a process that should, more-often-than-not, be performed in conjunction with deep core aeration.
+                    Overseeding provides your lawn with a better opportunity to grow lush and luxurious. If you have ever observed
+                    spots where your grass doesn’t come in as full as it once did, the overseeding process can help fill in those
+                    thin spots.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingSix">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
+                            aria-expanded="false" aria-controls="collapseSix" style="font-family: Georgia;">
+                        LAWN MOWING
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                <div class="card-body well">
+                    Take a chore off of your plate by scheduling weekly lawn mowing of your entire lawn and turf perimeter. At CR
+                    Landscaping we maintain the highest standard of service by using only the best lawn mowing equipment, which we
+                    rigorously maintain to ensure that they are always sharpened and tuned. For all your lawn mowing needs, call CR
+                    Landscaping today and see how great it can be to never mow your own lawn again!
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingSeven">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven"
+                            aria-expanded="false" aria-controls="collapseSeven" style="font-family: Georgia;">
+                        EDGING & BLOWING
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                <div class="card-body well">
+                    To deliver and maintain an aesthetically pleasing lawn, edging and blowing are essential functions of lawn mowing
+                    process. We provide our expert edging services for the perimeter and all objects on the property. We also take time
+                    and care to blow off all of your walkways, driveways and garden areas.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingEight">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight"
+                            aria-expanded="false" aria-controls="collapseEight" style="font-family: Georgia;">
+                        BAGGING OF CLIPPINGS
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                <div class="card-body well">
+                    Unless you are worried that grass clipping will be tracked inside your home, the lawn care and maintenance experts
+                    at CR Landscaping recommend that you leave grass clipping on the surface of your lawn after mowing. Bagging grass
+                    mean that all of the basic nutrients to your grasses health are unable to be recycled back into the soil. Your
+                    lawn’s optimum nutrient levels are achieved only by allowing the grass shoots to be inserted back into your turf.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingNine">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine"
+                            aria-expanded="false" aria-controls="collapseNine" style="font-family: Georgia;">
+                        DETHATCHING & POWER RAKING
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                <div class="card-body well">
+                    The lawn care experts at CR Landscaping recommend that a power raking should be executed every two to three years
+                    to facilitate a thicker and healthier lawn. In the absence of a good raking, dead grass will be packed down on top
+                    of the soil, which inhibits water and nutrients from accessing the roots of your lawn.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTen">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen"
+                            aria-expanded="false" aria-controls="collapseTen" style="font-family: Georgia;">
+                        WEED CONTROL
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                <div class="card-body well">
+                    We consider ourselves the premier lawn care experts, which means we use the highest industry-grade weed control
+                    products to rid your lawn and garden beds of weeds quickly, and for good. Weeds can overtake all areas of your yard
+                    from your garden to your front lawn, to your driveway. As weed control experts, we can determine what Iowa lawn care
+                    products are the best to apply to kill those pesky weeds without doing any damage to the integrity of your lawn, pets,
+                    or most importantly, your family’s health.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingEleven">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven"
+                            aria-expanded="false" aria-controls="collapseEleven" style="font-family: Georgia;">
+                        DISEASE & FUNGUS CONTROL
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+                <div class="card-body well">
+                    Over the years at CR Landscaping we have taken on a wide variety of lawn concerns including diseased and fungus
+                    infested lawns. These kinds of issues can be observed if your lawn has patches or spots of dead or damaged grass. If you
+                    see issues like this it is best to jump on the problem early by calling the Denver lawn care and maintenance professionals
+                    at CR Landscaping. Our trained and highly skilled technicians will evaluate your lawn and take the necessary measures to
+                    rid it of all disease and fungus issues.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwelve">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwelve"
+                            aria-expanded="false" aria-controls="collapseTwelve" style="font-family: Georgia;">
+                        INSECT CONTROL
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
+                <div class="card-body well">
+                    When insects infest your lawn they can cause irreparable damages to its integrity? The lawn care and maintenance experts
+                    at CR Landscaping are highly skilled insect control experts and are ready to handle all your insect control issues. We
+                    pride ourselves on using only the highest-quality insect eradication applications because we believe in the value of
+                    ensuring that they job is done correctly the first time around. Don’t let insects threaten the beauty of your lawn; call
+                    in the insect control experts at CR Landscaping today!
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
